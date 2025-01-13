@@ -21,7 +21,17 @@ public enum ErrorCode {
     
     // Yetkilendirme Hataları / Authorization Errors
     UNAUTHORIZED(4000, "Bu işlem için yetkiniz yok", "Unauthorized"),
-    INVALID_TOKEN(4001, "Geçersiz veya süresi dolmuş token", "Invalid or expired token");
+    INVALID_TOKEN(4001, "Geçersiz veya süresi dolmuş token", "Invalid or expired token"),
+    
+    // Kanal Hataları / Channel Errors
+    CHANNEL_NOT_FOUND(4000, "Kanal bulunamadı", "Channel not found"),
+    CHANNEL_ALREADY_EXISTS(4001, "Bu isimde bir kanal zaten var", "Channel already exists"),
+    CHANNEL_NAME_REQUIRED(4002, "Kanal ismi zorunludur", "Channel name is required"),
+    
+    // Mesaj Hataları / Message Errors
+    MESSAGE_NOT_FOUND(5000, "Mesaj bulunamadı", "Message not found"),
+    MESSAGE_TOO_LONG(5001, "Mesaj çok uzun", "Message too long"),
+    EMPTY_MESSAGE(5002, "Boş mesaj gönderilemez", "Empty message not allowed");
 
     private final int code;
     private final String turkishMessage;
