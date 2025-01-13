@@ -27,7 +27,10 @@ public enum ErrorCode {
     CHANNEL_NOT_FOUND(4000, "Kanal bulunamadı", "Channel not found"),
     CHANNEL_ALREADY_EXISTS(4001, "Bu isimde bir kanal zaten var", "Channel already exists"),
     CHANNEL_NAME_REQUIRED(4002, "Kanal ismi zorunludur", "Channel name is required"),
-    
+    ALREADY_SERVER_MEMBER(4003, "Kullanıcı halihazırda bu sunucunun üyesi", "The user is already a member of this server"),
+    INVALID_INVITE_CODE(4004, "Geçersiz davet kodu", "Invalid invitation code"),
+    NOT_SERVER_MEMBER(4005, "Kullanıcı halihazırda bu sunucunun üyesi", "The user is already a member of this server"),
+
     // Mesaj Hataları / Message Errors
     MESSAGE_NOT_FOUND(5000, "Mesaj bulunamadı", "Message not found"),
     MESSAGE_TOO_LONG(5001, "Mesaj çok uzun", "Message too long"),
@@ -42,4 +45,5 @@ public enum ErrorCode {
         this.turkishMessage = turkishMessage;
         this.englishMessage = englishMessage;
     }
+
 } 
